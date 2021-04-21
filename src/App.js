@@ -23,9 +23,15 @@ const App = () => {
       });
   };
 
+
   useEffect(() => {
     getPokemonList();
+    console.log(pokemonList)
   }, []);
+
+
+
+
 
   const data = {
     pokemonList,
