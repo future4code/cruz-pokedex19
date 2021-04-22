@@ -23,6 +23,7 @@ const App = () => {
       });
   };
 
+  
 
   useEffect(() => {
     getPokemonList();
