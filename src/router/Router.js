@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Pokedex } from '../components/Pokedex'
 import { Details } from '../components/Details'
-
 import Home from '../components/HomePage';
 
 const Router = () => {

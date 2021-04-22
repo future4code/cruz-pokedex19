@@ -8,10 +8,15 @@ const Home = () => {
   const receivedData = useContext(GlobalStateContext);
   const history = useHistory();
 
+ const  goToPokedex = () => {
+    history.push('/pokedex')
+  } 
+
+
   return (
     <div>
       <header>
-        <button onClick={() => goToPokedex(history)}>Ver minha POKEDEX</button>
+        <button onClick={goToPokedex}>Ver minha POKEDEX</button>
         <h1>Lista de Pokemons</h1>
       </header>
       <main className="CardContainer">

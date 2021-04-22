@@ -6,8 +6,9 @@ import { GlobalStateContext } from '../App'
 const Card = (props) => {
   const [pokeDetail, setPokeDetail] = useState({});
 
-  const { pokedex, setPokedex } = useContext(GlobalStateContext)
-
+  const { pokedex, setPokedex} = useContext(GlobalStateContext)
+ 
+  
   useEffect(() => {
     getPokemonDetail(props.pokeName);
   }, [props.pokeName]);
@@ -22,11 +23,17 @@ const Card = (props) => {
         console.log(error.message);
       });
   };
+ 
 
   // a função que adiciona o pokemon dentro da pokedex
-  const addToPokedex = () => {
-    setPokedex([...pokedex, pokeDetail])
-  } 
+  const addToPokedex = (name) => {
+    
+    setPokedex([...pokedex, pokeDetail])  
+    alert(`${name} adicionado a pokedex`) 
+    
+  }
+  
+
 
 
   
@@ -41,7 +48,7 @@ const Card = (props) => {
         alt={props.pokeName}
       />
       <h3>{props.pokeName}</h3>
-      <button onClick={addToPokedex}>Adicionar</button>
+      <button onClick={() => addToPokedex(props.pokeName)}>Adicionar</button>
     </div>
   );
 };
