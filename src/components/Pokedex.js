@@ -28,12 +28,13 @@ export const Pokedex = () => {
       const index = pokedex.findIndex((i) => i.id === itemToRemove);
       let newPokedex = [...pokedex];
       if (newPokedex[index]=== 1) {
+        
         newPokedex.splice(index, 1);
       } else {
         newPokedex[index] -= 1;
       }
+      window.confirm("Deseja mesmo excluir esse pokemon? ")
       setPokedex(newPokedex);
-      alert("Pokemon excluido")
       console.log(pokedex)
 
     };

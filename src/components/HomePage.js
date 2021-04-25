@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import Card from './Card';
 import { GlobalStateContext } from '../App';
 import { useHistory } from 'react-router';
@@ -12,9 +12,9 @@ const Home = () => {
     history.push('/pokedex')
   } 
 
-
   return (
     <div>
+    
       <header>
         <button onClick={goToPokedex}>Ver minha POKEDEX</button>
         <h1>Lista de Pokemons</h1>
@@ -30,6 +30,7 @@ const Home = () => {
           );
         })}
       </main>
+      
     </div>
   );
 };

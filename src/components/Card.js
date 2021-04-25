@@ -5,10 +5,10 @@ import { GlobalStateContext } from '../App'
 
 const Card = (props) => {
   const [pokeDetail, setPokeDetail] = useState({});
-
   const { pokedex, setPokedex} = useContext(GlobalStateContext)
- 
-  
+  //const [verify, setVerify] = useState()
+
+
   useEffect(() => {
     getPokemonDetail(props.pokeName);
   }, [props.pokeName]);
@@ -18,27 +18,43 @@ const Card = (props) => {
       .get(`${BASE_URL}/${name}`)
       .then((response) => {
         setPokeDetail(response.data);
+        
       })
       .catch((error) => {
         console.log(error.message);
       });
   };
  
-
+  
+const verify = []
   // a função que adiciona o pokemon dentro da pokedex
   const addToPokedex = (name) => {
+   
+
+  for (let index = 0; index < pokedex.length; index++) {
+       const element = pokedex[index].name
+  
+     
+      verify.push(element)
     
-    setPokedex([...pokedex, pokeDetail])  
-    alert(`${name} adicionado a pokedex`) 
-    
+  console.log(verify)
+ 
+}
+const verificar = verify.indexOf(name,0)
+console.log(verificar)
+
+if (verificar === -1){
+  setPokedex([...pokedex, pokeDetail])
+  alert('Pokemon adicionado a pokedex')
+}else {
+  alert('Pokemon ja existente')
+}
+
+
   }
-  
-
-
-
-  
   return (
     <div className="CardBox">
+      
       <img
         src={
           pokeDetail.sprites &&
@@ -48,7 +64,7 @@ const Card = (props) => {
         alt={props.pokeName}
       />
       <h3>{props.pokeName}</h3>
-      <button onClick={() => addToPokedex(props.pokeName)}>Adicionar</button>
+      <button onClick={() => addToPokedex(props.pokeName,props.id)}>Adicionar</button>
     </div>
   );
 };
