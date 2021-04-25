@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { Pokedex } from '../components/Pokedex'
-import { Details } from '../components/Details'
+import { Pokedex } from '../components/Pokedex';
+import { Details } from '../components/Details';
 import Home from '../components/HomePage';
 
 const Router = () => {
@@ -9,6 +9,10 @@ const Router = () => {
     <BrowserRouter>
       <Switch>
         <Route exact path={'/'}>
+          <Home />
+        </Route>
+
+        <Route exact path="/page/:listpage?">
           <Home />
         </Route>
 
