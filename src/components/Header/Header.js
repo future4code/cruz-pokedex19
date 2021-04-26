@@ -9,8 +9,7 @@ export default function Header(props) {
       <LogoContainer>
         <Logo src={LogoImg} alt="pokeball" />
       </LogoContainer>
-      <LogoContainer>
-      </LogoContainer>
+      <LogoContainer></LogoContainer>
     </TopMenu>
   );
 }

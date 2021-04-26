@@ -6,7 +6,7 @@ export const Nav = styled.nav`
   padding: 10px;
   margin: 15px 0;
   border-radius: 10px;
-  background-color: red;
+  background-color: #b00000;
   cursor: default;
   display: flex;
   align-items: center;

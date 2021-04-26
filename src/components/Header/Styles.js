@@ -7,9 +7,9 @@ export const TopMenu = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-image: url(${background}) ;
-  background-repeat: no-repeat ;
-  background-position: center center ;
+  background-image: url(${background});
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
   position: absolute;
   top: 0;
@@ -56,4 +56,3 @@ export const PokedexButton = styled.button`
     padding: 5px;
   }
 `;
-

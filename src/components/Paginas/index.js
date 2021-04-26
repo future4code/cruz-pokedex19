@@ -1,6 +1,6 @@
 import { Nav } from './styled';
 import { useHistory } from 'react-router-dom';
-import React from 'react';
+import React, { useContext } from 'react';
 
 const Pagination = ({ pokesPerPage, totalPokes, paginate }) => {
   let pageNumber = Number(window.location.pathname.split('/')[2]) || 1;
@@ -11,6 +11,8 @@ const Pagination = ({ pokesPerPage, totalPokes, paginate }) => {
       paginate(pageNumber - 1);
     }
   };
+
+  const history = useHistory();
 
   const next = (pageNumber) => {
     if (!pageNumber) {
@@ -44,9 +46,13 @@ const Pagination = ({ pokesPerPage, totalPokes, paginate }) => {
         )}
       </div>
       <div>
-        <a class="nes-btn is-small" onClick={goToPokedex}>
+        <butbutton
+          type="button"
+          class="nes-btn is-warning"
+          onClick={goToPokedex}
+        >
           Pokédex
-        </a>
+        </butbutton>
       </div>
     </Nav>
   );
