@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "nes.css/css/nes.min.css";
+<link rel="stylesheet" href="./node_modules/nes.css/css/nes.min.css"></link>
 ReactDOM.render(
   <React.StrictMode>
     <App />

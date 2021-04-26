@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { Pokedex } from '../components/Pokedex'
-import { Details } from '../components/Details'
-import Home from '../components/HomePage';
+import PokedexPage from '../components/Pokedex/PokedexPage';
+import Home from '../components/HomePage/HomePage';
+import PokemonDetailsPage from '../components/Detalhes/details';
 
 const Router = () => {
   return (
@@ -12,9 +12,15 @@ const Router = () => {
           <Home />
         </Route>
 
-        <Route exact path="/pokedex" component={Pokedex} />
+        <Route exact path="/page/:listpage?">
+          <Home />
+        </Route>
 
-        <Route exact path="/pokedex/details/:id" component={Details} />
+        <Route exact path="/poke-detail/:pokemonId">
+          <PokemonDetailsPage />
+        </Route>
+
+        <Route exact path="/pokedex" component={PokedexPage} />
 
         <Route>
           <p>Erro 404: página não encontrada</p>
