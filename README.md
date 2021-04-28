@@ -1,16 +1,7 @@
-# POKEDEX
+#Pokédex
+![LogoImg](https://user-images.githubusercontent.com/77744003/116025279-7b262e80-a626-11eb-9200-d7b7eabcdd02.png)
 
-Nome dos integrantes: 
-- Pessoa 1
-- Pessoa 2
-- Pessoa 3
+Link do surge: http://animated-ball.surge.sh/
 
-Link do Surge: www.link.com.br
+Feito por: Luana Farias, William Gomes e Elber Sousa
 
-O que funciona:
-- Item 1
-- Item 2
-
-O que não funciona: 
-- Item 3
-- Item 4
